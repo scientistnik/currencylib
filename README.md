@@ -1,6 +1,6 @@
 # currencylib
 
-Library for work with currency.com exchange write on JavaScript.
+Library for work with currency.com exchange write on TypeScript.
 
 ## How to install
 

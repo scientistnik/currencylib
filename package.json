@@ -1,9 +1,9 @@
 {
   "name": "currencylib",
-  "version": "0.1.0",
-  "main": "lib/index.js",
+  "version": "0.2.0",
+  "main": "build/index.js",
   "license": "MIT",
-  "description": "Library for work with currency.com exchange write on JavaScript.",
+  "description": "Library for work with currency.com exchange write on TypeScript.",
   "author": "scientistnik <scientistnik89@gmail.com>",
   "repository": {
     "type": "git",
@@ -11,24 +11,23 @@
   },
   "scripts": {
     "dev": "nodemon --exec yarn build --watch src",
-    "prebuild": "rm -rf lib",
-    "build": "babel src -d lib",
-    "postbuild": "browserify lib/index.js --standalone currencylib -o build/currencylib.js -d && minify build/currencylib.js -o  build/currencylib.min.js",
-    "test": "mocha --require @babel/register"
+    "test": "jest",
+    "build": "tsc",
+    "clean": "rm -rf lib build"
   },
   "dependencies": {
-    "cross-fetch": "^3.0.4",
+    "cross-fetch": "^3.1.4",
     "js-sha256": "^0.9.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.7",
-    "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.7",
-    "@babel/register": "^7.7.7",
-    "babel-minify": "^0.5.1",
-    "browserify": "^16.5.0",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.7",
     "dotenv": "^8.2.0",
+    "jest": "^27.4.5",
     "mocha": "^7.0.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "ts-jest": "^27.1.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
   }
 }

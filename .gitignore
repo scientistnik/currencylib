@@ -1,5 +1,5 @@
 build
-lib
 node_modules
 .env
 yarn.lock
+tsconfig.tsbuildinfo

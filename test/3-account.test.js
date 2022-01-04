@@ -14,8 +14,8 @@ describe("Account", function() {
   });
 
   it("info", () => account.info());
-  it("myTrades", () => account.myTrades("ICE"));
-  it("openOrders", () => account.openOrders("ICE"));
+  it.skip("myTrades", () => account.myTrades("BTC/USD"));
+  it.skip("openOrders", () => account.openOrders("BTC/USD"));
   it.skip("newOrder", () => account.newOrder());
   it.skip("cancelOrder", () => account.cancelOrder("ICE"));
 });

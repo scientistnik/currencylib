@@ -11,7 +11,7 @@ describe("Market endpoints", () => {
     });
 
     it("with required parameters", () => {
-      return depth("ICE");
+      return depth("BTC/USD");
     });
   });
 
@@ -25,7 +25,7 @@ describe("Market endpoints", () => {
     });
 
     it("with required parameters", () => {
-      return aggTrades("ICE");
+      return aggTrades("BTC/USD");
     });
   });
 
@@ -39,7 +39,7 @@ describe("Market endpoints", () => {
     });
 
     it("with required parameters", () => {
-      return klines("ICE", "1m");
+      return klines("BTC/USD", "1m");
     });
   });
 
@@ -49,7 +49,7 @@ describe("Market endpoints", () => {
     });
 
     it("with required parameters", () => {
-      return ticker24hr("ICE");
+      return ticker24hr("BTC/USD");
     });
   });
 });
