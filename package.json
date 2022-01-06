@@ -1,6 +1,6 @@
 {
   "name": "currencylib",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "build/index.js",
   "license": "MIT",
   "description": "Library for work with currency.com exchange write on TypeScript.",
@@ -13,7 +13,7 @@
     "dev": "nodemon --exec yarn build --watch src",
     "test": "jest",
     "build": "tsc",
-    "clean": "rm -rf lib build"
+    "clean": "rm -rf build tsconfig.tsbuildinfo"
   },
   "dependencies": {
     "cross-fetch": "^3.1.4",
