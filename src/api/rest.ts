@@ -89,14 +89,18 @@ export class RestAPI {
         throw new Error(
           `Bad response from server, ${res.status} ${
             res.statusText
-          }: ${await res.json()}`
+          }: ${await res.text()}`
         );
 
-      let json = await res.json();
+      try {
+        let json = await res.json();
+        if (json.code)
+          throw new Error(`Error endpoint, ${JSON.stringify(json)}`);
 
-      if (json.code) throw new Error(`Error endpoint, ${JSON.stringify(json)}`);
-
-      return json;
+        return json;
+      } catch (error) {
+        throw new Error(`Response is not json: ${await res.text()}`);
+      }
     });
   }
 

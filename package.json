@@ -1,6 +1,6 @@
 {
   "name": "currencylib",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "main": "build/index.js",
   "license": "MIT",
   "description": "Library for work with currency.com exchange write on TypeScript.",
